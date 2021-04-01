@@ -32,11 +32,15 @@ public class TesteDB {
 			ResultSet res= st.executeQuery(sql);
 			//Eseguire una query: mi ritorna un oggeto 'ResultSet'(interfaccia)
 			
+			
+			//res.next() : ritorna un boolean ( nella riga sotto l'ultima riga del DB sarà false
+			
 			List<String> formeUFO = new ArrayList<>();
 			while(res.next()) {
-				String forma = res.getString("shape");
+				String forma = res.getString("shape"); //shape=nome del campo nel database
 				formeUFO.add(forma);
 			}
+			st.close(); //Ha senso se c'è molte statement nella connection
 			System.out.println(formeUFO);
 			
 			
