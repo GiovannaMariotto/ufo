@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 public class EntryPoint extends Application {
 
+	
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
@@ -29,7 +30,7 @@ public class EntryPoint extends Application {
      * support. NetBeans ignores main().
      *
      * @param args the command line arguments
-     */
+     */ 
     public static void main(String[] args) {
         launch(args);
     }
